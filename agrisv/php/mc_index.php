@@ -1,4 +1,5 @@
 <?php
+// @date 2015-03-27
 //
 function get_nowDate(){
 	$ret="";
@@ -24,7 +25,7 @@ function get_nowDate(){
 
 //Smartyクラスの呼び出し
 include_once("../libs/AppCom.php");
-
+ 
 	$clsConst = new AppConst();
 	
 	// セッション開始
