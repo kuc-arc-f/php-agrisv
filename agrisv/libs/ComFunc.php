@@ -393,7 +393,7 @@ function com_getMcDat($db  ,$sid,  $sv_id){
 	$sql = $sql ." , kai_num_4, vnum_4";
 	$sql = $sql ." , ck_num, created";
 	$sql = $sql . " from m_sv_mc ";
-	$sql = $sql ." where id="  . $sid . " and sv_id=" . $sv_id . " limit 1;";
+	$sql = $sql ." where mc_id="  . $sid . " and sv_id=" . $sv_id . " limit 1;";
 	$result = $db->GetRecord( $sql );
 	while ($row = mysql_fetch_array ($result)) {
 		$dat[0] = $row;

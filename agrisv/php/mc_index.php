@@ -44,7 +44,7 @@ include_once("../libs/AppCom.php");
 		$sql = $sql ." , ck_num , created";
 		$sql = $sql ." , modified";
 		$sql = $sql ." ,(DATE_FORMAT((select max(created) from t_sv_sensor where sv_id=m_sv_mc.sv_id and mc_id =m_sv_mc.id),'%m-%d %H:%i') ) as up_last";
-		$sql = $sql . ",sv_id";
+		$sql = $sql . ",sv_id, mc_id";
 		$sql = $sql . " from m_sv_mc ";
 		$sql = $sql . " where sv_id=" . $_GET["sv_id"];
 		$sql = $sql . " order by id ";

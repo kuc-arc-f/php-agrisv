@@ -23,16 +23,16 @@
 	  </tr>
 {foreach from =$result item="dat" key="key" name="loopName"}
 	  <tr height="60px" >
-		<td>{$dat.id}</td>
-		<td onClick="show_report('{$PHP_DIR}' , {$dat.id} , '{$s_nowStr}');">
+		<td>{$dat.mc_id }</td>
+		<td onClick="show_report('{$PHP_DIR}' , {$dat.mc_id } , '{$s_nowStr}');">
 		<p style="font-size : 18;">{$dat.mc_name}</p></td>
-		<td onClick="show_report('{$PHP_DIR}' , {$dat.id} , '{$s_nowStr}');">
+		<td onClick="show_report('{$PHP_DIR}' , {$dat.mc_id } , '{$s_nowStr}');">
 		{$dat.up_last}</td>
-		<td onClick="show_report('{$PHP_DIR}' , {$dat.id} , '{$s_nowStr}');">{$dat.moi_num}
+		<td onClick="show_report('{$PHP_DIR}' , {$dat.mc_id } , '{$s_nowStr}');">{$dat.moi_num}
 		</td>
-		<td onClick="show_report('{$PHP_DIR}' , {$dat.id} , '{$s_nowStr}');">{$dat.kai_num_1}
+		<td onClick="show_report('{$PHP_DIR}' , {$dat.mc_id } , '{$s_nowStr}');">{$dat.kai_num_1}
 		</td>
-		<td onClick="show_report('{$PHP_DIR}' , {$dat.id} , '{$s_nowStr}');">
+		<td onClick="show_report('{$PHP_DIR}' , {$dat.mc_id } , '{$s_nowStr}');">
 {if ($dat.vnum_1=="1")}
 <font color="blue">ON</font>
 {else}
@@ -40,21 +40,21 @@
 {/if}
 
 		</td>
-		<td onClick="show_report('{$PHP_DIR}' , {$dat.id} , '{$s_nowStr}');">
+		<td onClick="show_report('{$PHP_DIR}' , {$dat.mc_id } , '{$s_nowStr}');">
 {if ($dat.vnum_2=="1")}
 <font color="blue">ON</font>
 {else}
 -
 {/if}
 		</td>
-		<td onClick="show_report('{$PHP_DIR}' , {$dat.id} , '{$s_nowStr}');">
+		<td onClick="show_report('{$PHP_DIR}' , {$dat.mc_id } , '{$s_nowStr}');">
 {if ($dat.vnum_3=="1")}
 <font color="blue">ON</font>
 {else}
 -
 {/if}
 		</td>
-		<td onClick="show_report('{$PHP_DIR}' , {$dat.id} , '{$s_nowStr}');">
+		<td onClick="show_report('{$PHP_DIR}' , {$dat.mc_id } , '{$s_nowStr}');">
 {if ($dat.vnum_4=="1")}
 <font color="blue">ON</font>
 {else}
@@ -63,7 +63,7 @@
 		</td>
 		<td>{$dat.ck_num }</td>
 		  <td>
-			<A HREF="#" onClick="show_report('{$PHP_DIR}' , {$dat.id} , '{$s_nowStr}' , {$dat.sv_id });">
+			<A HREF="#" onClick="show_report('{$PHP_DIR}' , {$dat.mc_id  } , '{$s_nowStr}' , {$dat.sv_id });">
 			<button class="btn btn-default btn-lg"> Detail </button>
 			</A>
 		  </td>
