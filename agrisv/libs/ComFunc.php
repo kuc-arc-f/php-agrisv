@@ -105,6 +105,36 @@ function com_convert($db, $sid){
 // @argment
 // @return
 //------------------------------------
+function com_convertMs2($db, $sid){
+	$ret=FALSE;
+	
+	$sql = "delete from m_sv_mc where sv_id=" . $sid;
+	$result = $db->Exec_NonQuery( $sql );
+	if ($result == false) {
+		return $ret;
+	}
+	$sql = "insert into m_sv_mc";
+	$sql = $sql . "(sv_id, mc_id, mc_name, moi_num,kai_num_1,kai_num_2,kai_num_3,kai_num_4";
+	$sql = $sql . ",vnum_1,vnum_2,vnum_3,vnum_4,ck_num)";
+	$sql = $sql . "select sv_id, mc_id ,mc_name ,moi_num,kai_num_1, kai_num_2,kai_num_3,kai_num_4";
+	$sql = $sql . ",vnum_1,vnum_2,vnum_3,vnum_4,ck_num from wk_mcs";
+	$sql = $sql . " where sv_id=" . $sid;
+	$result = $db->Exec_NonQuery( $sql );
+	if ($result == false) {
+		return $ret;
+	}
+
+	$ret = TRUE;
+	return $ret;
+}
+
+//------------------------------------
+// @calling
+// @purpose
+// @date
+// @argment
+// @return
+//------------------------------------
 function com_convertMs($db, $sid){
 	$ret=FALSE;
 	

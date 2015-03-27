@@ -35,7 +35,8 @@ include_once("../libs/AppCom.php");
 				echo(json_encode($datRes ) );
 				exit;
 			}			
-			if(com_convertMs($db, $_GET["sv_id"])==FALSE){
+//			if(com_convertMs($db, $_GET["sv_id"])==FALSE){
+			if(com_convertMs2($db, $_GET["sv_id"])==FALSE){
 				$datParam["stat"]   =ER_STAT_101;
 				$datParam["param"]  ="";
 				$datRes["ret"]     = NG_CODE;
