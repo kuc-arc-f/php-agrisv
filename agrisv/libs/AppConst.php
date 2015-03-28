@@ -2,10 +2,10 @@
 define("OK_CODE" ,  1 );
 define("NG_CODE" ,  0 );
 
-define("ANQ_DB_HOST", "host123");
-define("ANQ_DB_NAME", "db123");
-define("ANQ_DB_USER", "user123");
-define("ANQ_DB_PASS", "pass123");
+define("SYS_DB_HOST", "host123");
+define("SYS_DB_NAME", "db123");
+define("SYS_DB_USER", "user123");
+define("SYS_DB_PASS", "pass123");
 
 define("CONT_NAME", "/agrisv" );
 

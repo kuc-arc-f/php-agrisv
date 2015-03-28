@@ -20,7 +20,7 @@ class ComMysql{
 	// @return
 	//------------------------------------
 	function Connect(){
-			$this->Con = mysql_connect (ANQ_DB_HOST ,ANQ_DB_USER , ANQ_DB_PASS);
+			$this->Con = mysql_connect (SYS_DB_HOST ,SYS_DB_USER , SYS_DB_PASS);
 
 			if ($this->Con   == false) {
 			    $message  = 'Invalid query: ' . mysql_error() . "\n";
@@ -30,7 +30,7 @@ class ComMysql{
 			} 
 //var_dump("_Connect.OK");
 			
-			$select_db = mysql_select_db ( ANQ_DB_NAME , $this->Con  ); 
+			$select_db = mysql_select_db ( SYS_DB_NAME , $this->Con  ); 
 			if ($select_db == false) {
 				print "DB_SELECT Error!";
 				return false;
